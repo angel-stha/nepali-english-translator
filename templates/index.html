@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>
+नेपाली अनुवादक</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<p> नेपालीलाई अंग्रेजीमा  अनुवाद गर्नुहोस् </p>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+   
+    	<input type="text" name="type nepali" placeholder="यहाँ नेपालीमा  टाइप गर्नुहोस्" required="required" />
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Translate</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+ <div id="div2">
+<p style="position: fixed; bottom: 0; width:50%; text-align: left; font-size: 18px">
+विश्वभरि करिब  करोड भन्दा बढी मानिसहरूले नेपाली भाषा बोल्छन्। ती नेपाली वक्ताका लागि जसको अंग्रेजी कडा छैन, नेपालीलाई अंग्रेजीमा अनुवाद गर्न  गाह्रो हुन सक्छ। धेरै वेबसाइटहरु केहि डलर को लागी अंग्रेजी अनुवाद गर्न सेवाहरु प्रदान गर्दछ। जबकि धेरै पाठ (जस्तै पुस्तकहरू, लेख)  अनुवाद गर्न र पेशेवर सेवाको लागि भुक्तान गर्नु राम्रो विचार हो, त्यहाँ सामान्यतया प्रयोग हुने वाक्य, अभिवादन सन्देशहरू, र अन्य अनौपचारिक प्रयोगको लागि भुक्तान गर्ने कुनै विन्दु हुँदैन। यी उद्देश्यहरूको लागि, यो उपकरण प्रयोग गर्न सकिन्छ|</p>
+<p style=" position: absolute; bottom: 0px; width:50% ;right: 0px; font-size: 18px;float:right">More than a million people around the world speak Nepali. For those Nepali speakers whose English is not strict, it may be difficult to translate Nepali into English. Many websites offer English translation services for a few dollars. While a lot of text (like books, articles) is a good idea to translate and pay for professional service, there is no point in paying for commonly used sentences, greeting messages, and other informal use. For these purposes, this tool can be used</p>
+</div>
+
+</body>
+</html>
+
