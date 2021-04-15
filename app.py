@@ -24,8 +24,8 @@ def read_text(filename):
 def to_pairs(doc):
     lines = doc.strip().split('\n')
     return lines
-nepali = (read_text(r"/content/final.ne"))
-english = read_text(r"/content/final.en")  
+nepali = (read_text(r"bible.ne"))
+english = read_text(r"english.en")  
 vocab_nep=[]
 vocab_eng=[]
 words=[]
